@@ -1,0 +1,249 @@
+@use "variables" as V;
+@use "mixins";
+.card {
+  position: absolute;
+  top: 320px;
+  left: 10vw;
+  width: 80%;
+  margin-bottom: 20px;
+  padding-top: 2.5rem;
+  border-radius: 10px;
+  color: V.$Grayish_Blue_Text;
+  background-color: V.$White_Pricing_Component_Background;
+  @media (min-width:675px) {
+    max-width: 90%;
+
+  }
+
+  &__pageviews__content{
+      width: 100%;
+      border-bottom: 1px solid V.$Light_Grayish_Blue_Empty_Slider_Bar;
+    }
+    &__pageviews__content{
+        &__description{
+        text-transform: uppercase;
+        @media (min-width:675px) {
+          text-align: left;
+          margin: 18px 40px;
+          letter-spacing: .4rem;
+        }
+      }
+    }
+    .slider-container{
+      width: 90%;
+      margin: 14% auto;
+      position: relative;
+    }
+    
+    #slider {
+      -webkit-appearance: none; 
+      width: 100%;
+      height: 7px;
+      border-radius: 3px;
+      background-color: V.$Light_Grayish_Blue_Empty_Slider_Bar;
+    }
+    
+    /* Design slider button */
+    #slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+    }
+    
+    #selector {
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      bottom: -17px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .selectBtn {
+      height: 48px;
+      width: 48px;
+      background-image: url('../images/icon-slider.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: V.$Strong_Cyan_Slider_Backround;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 2px;
+    }
+    #progressBar {
+      width: 50%;
+      height: 7px;
+      background: V.$Soft_Cyan_Full_Slider_Bar;
+      border-radius: 3px;
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+    }
+    &__pageviews__dollars{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      font-size: 2.9rem;
+      font-weight: 800;
+      color: V.$Dark_Desaturated_Blue_Text_CTA_Background;
+      margin-bottom: 2rem;
+      @media (min-width:675px) {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+      }
+      & span {
+        display: inline-block;
+        font-size: 1rem;
+        color: V.$Grayish_Blue_Text;
+      }
+    }
+    &__billing {
+      width: 100%;  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      align-items: center;
+      font-size: 1rem;
+      margin-bottom: 50px;
+      @media (min-width:675px) {
+        justify-content: flex-end;
+        width: 96%;
+      }
+    }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* escondemos HTML checkbox por defecto */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider*/
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: V.$Light_Grayish_Blue_Toggle_Background;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 1px;
+  &:hover {
+      background-color: V.$Strong_Cyan_Slider_Backround;
+  }
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/*Rounded sliders*/
+.slider.round {
+  
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.discount__content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    #discount {
+      position: relative;
+      display: flex;
+      max-width: 50%;
+      padding: .3rem;
+      background-color: V.$Light_Grayish_Red_Discount_Background;
+      color: V.$Light_Red_Discount_Text;
+      font-weight: 700;
+      border-radius: 25px;
+      border: none;
+      margin-left: .4rem;
+      @media (min-width:675px) {
+        width: 9rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
+    }
+    #show-text-discount {
+        display: none;
+        @media (min-width:675px) {         
+           display: inline-block;
+           margin-left: .2rem;
+        }
+    }
+    &__information{
+      display: flex;
+      flex-direction: column;
+      @media (min-width:675px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.4rem;
+        text-align: left;
+      }
+      &__checks img {
+        margin-right: 5px;
+      }
+      &__start-trial{
+        margin-top: 15px;
+        background-color: V.$Dark_Desaturated_Blue_Text_CTA_Background;
+        width: 250px;
+        height: 55px;
+        border-radius: 25px;
+        display: grid;
+        place-content: center;
+        align-self: center;
+        cursor: pointer;
+        margin-bottom: 40px;
+        @media (min-width:675px) {
+          margin-top: 30px;
+        }
+        & a {
+          text-decoration: none;
+          color: V.$Light_Grayish_Blue_Toggle_Background;
+          font-size: 1.1rem;
+        }        
+      }     
+    }
+    .information-container{
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: .5rem;
+    }
+}
+

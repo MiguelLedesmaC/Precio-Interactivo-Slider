@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  background-color: hsla(228deg, 100%, 99%, 0.767);
+}
+
+.container {
+  min-width: 375px;
+  text-align: center;
+}
+
+.card {
+  position: absolute;
+  top: 320px;
+  left: 10vw;
+  width: 80%;
+  margin-bottom: 20px;
+  padding-top: 2.5rem;
+  border-radius: 10px;
+  color: hsl(225deg, 20%, 60%);
+  background-color: hsl(0deg, 0%, 100%);
+  /* Design slider button */
+  /* escondemos HTML checkbox por defecto */
+  /* The slider*/
+  /*Rounded sliders*/
+}
+@media (min-width: 675px) {
+  .card {
+    max-width: 90%;
+  }
+}
+.card__pageviews__content {
+  width: 100%;
+  border-bottom: 1px solid hsl(224deg, 65%, 95%);
+}
+.card__pageviews__content__description {
+  text-transform: uppercase;
+}
+@media (min-width: 675px) {
+  .card__pageviews__content__description {
+    text-align: left;
+    margin: 18px 40px;
+    letter-spacing: 0.4rem;
+  }
+}
+.card .slider-container {
+  width: 90%;
+  margin: 14% auto;
+  position: relative;
+}
+.card #slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 3px;
+  background-color: hsl(224deg, 65%, 95%);
+}
+.card #slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.card #selector {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.card .selectBtn {
+  height: 48px;
+  width: 48px;
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(174deg, 86%, 45%);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+}
+.card #progressBar {
+  width: 50%;
+  height: 7px;
+  background: hsl(174deg, 77%, 80%);
+  border-radius: 3px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+.card__pageviews__dollars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 2.9rem;
+  font-weight: 800;
+  color: hsl(227deg, 35%, 25%);
+  margin-bottom: 2rem;
+}
+@media (min-width: 675px) {
+  .card__pageviews__dollars {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+}
+.card__pageviews__dollars span {
+  display: inline-block;
+  font-size: 1rem;
+  color: hsl(225deg, 20%, 60%);
+}
+.card__billing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+@media (min-width: 675px) {
+  .card__billing {
+    justify-content: flex-end;
+    width: 96%;
+  }
+}
+.card .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.card .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.card .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223deg, 50%, 87%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px;
+}
+.card .slider:hover {
+  background-color: hsl(174deg, 86%, 45%);
+}
+.card .slider::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.card input:checked + .slider {
+  background-color: #2196F3;
+}
+.card input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.card input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.card .slider.round {
+  border-radius: 34px;
+}
+.card .slider.round:before {
+  border-radius: 50%;
+}
+.card .discount__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card #discount {
+  position: relative;
+  display: flex;
+  max-width: 50%;
+  padding: 0.3rem;
+  background-color: hsl(14deg, 92%, 95%);
+  color: hsl(15deg, 100%, 70%);
+  font-weight: 700;
+  border-radius: 25px;
+  border: none;
+  margin-left: 0.4rem;
+}
+@media (min-width: 675px) {
+  .card #discount {
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+.card #show-text-discount {
+  display: none;
+}
+@media (min-width: 675px) {
+  .card #show-text-discount {
+    display: inline-block;
+    margin-left: 0.2rem;
+  }
+}
+.card__information {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 675px) {
+  .card__information {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.4rem;
+    text-align: left;
+  }
+}
+.card__information__checks img {
+  margin-right: 5px;
+}
+.card__information__start-trial {
+  margin-top: 15px;
+  background-color: hsl(227deg, 35%, 25%);
+  width: 250px;
+  height: 55px;
+  border-radius: 25px;
+  display: grid;
+  place-content: center;
+  align-self: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+@media (min-width: 675px) {
+  .card__information__start-trial {
+    margin-top: 30px;
+  }
+}
+.card__information__start-trial a {
+  text-decoration: none;
+  color: hsl(223deg, 50%, 87%);
+  font-size: 1.1rem;
+}
+.card .information-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 0.5rem;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+.header .title__container {
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  position: relative;
+  max-width: 523px;
+  margin-top: -190px;
+}
+.header #img-circles {
+  position: absolute;
+  top: -35px;
+  left: 88px;
+  width: 202px;
+  z-index: -1;
+}
+.header__title {
+  font-size: 1.7rem;
+  color: hsl(227deg, 35%, 25%);
+  margin-bottom: 24px;
+}
+.header__sign-up {
+  width: 55%;
+  align-self: center;
+  color: hsl(225deg, 20%, 60%);
+  font-size: 1.08rem;
+}
+@media (min-width: 675px) {
+  .header__sign-up {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

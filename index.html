@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="title__container">
+        <img id="img-circles" src="./images/pattern-circles.svg" alt="circles img">
+        <h1 class="header__title">  Simple, traffic-based pricing</h1>
+        <p class="header__sign-up">Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+    </header>
+    <content class="card">
+      <article class="card__pageviews">
+        <div class="card__pageviews__content">
+          <h3 class="card__pageviews__content__description"><span id="quanty-pages"></span> Pageviews</h3>
+          <!-- Slider -->
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" id="slider">
+            <div id="selector">
+              <div class="selectBtn"></div>
+              
+            </div>
+            <div id="progressBar"></div>
+          </div>
+          <p class="card__pageviews__dollars">$16.00 <span>/month</span></p>
+        
+        <div class="card__billing">
+          <p class="card__billing__monthly">Monthly Billing</p>
+
+
+          <!-- start Toggle Switch -->
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
+          <!-- end Toggle Switch -->
+          <div class="discount__content">
+            <p class="card__billing__yearly">Yearly Billing </p>
+            <p id="discount">25% <span id="show-text-discount">discount</span> </p>
+          </div>
+          
+
+        </div>
+      </div>
+
+          <div class="card__information">
+
+            <div class="information-container">
+              
+              <div class="card__information__checks">
+                <img src="images/icon-check.svg" alt="check">
+                <span class="card__information__checks__text">Unlimited websites</span>
+              </div>
+                        
+              
+                        <div class="card__information__checks">
+              <img src="images/icon-check.svg" alt="check">
+              <span class="card__information__checks__text">100% data ownership</span>
+                        </div>
+                      
+                      <div class="card__information__checks">
+                        <img src="images/icon-check.svg" alt="check">
+                        <span class="card__information__checks__text"> Email reports</span>
+                      </div>
+            </div>
+        <p class="card__information__start-trial">
+          <a href="#">Start my trial</a>
+        </p>
+      </div>
+      </article>
+    </content>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">XcorpioDev</a>.
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>

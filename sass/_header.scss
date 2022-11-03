@@ -1,0 +1,44 @@
+@use 'variables'as V;
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    .title__container{
+        display: flex;
+        flex-direction: column;
+        z-index: 0;
+        position: relative;
+        max-width: 523px;  
+        margin-top: -190px;
+    }
+    #img-circles {
+        position: absolute;
+        top: -35px;
+        left: 88px;
+        width: 202px;
+        z-index: -1;
+    }
+    &__title {
+        font-size: 1.7rem;
+        color: V.$Dark_Desaturated_Blue_Text_CTA_Background;
+        margin-bottom: 24px;
+        
+    }
+    &__sign-up {
+        width: 55%;
+        align-self: center;      
+        color: V.$Grayish_Blue_Text;
+        font-size: 1.08rem;
+        @media (min-width:675px) {
+            width: 100%;
+        }
+        
+    }
+}
