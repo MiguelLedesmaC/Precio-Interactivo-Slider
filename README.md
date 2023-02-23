@@ -16,7 +16,7 @@ Es una lading page con un slider que va cambiando dinamicamente el precio según
 * ✔️[Portofolio](https://miguelledesmac.github.io/Portofolio-Oficial/)
 
 ## Ver ejemplo en vivo
-✔️[ENLACEGITHUBPAGES](ENLACEGITHUBPAGES)
+✔️[demo](https://miguelledesmac.github.io/Precio-Interactivo-Slider/)
 
 ## Instalacion
 Este proyecto no necesita instalacion. simplemente abre la carpeta o haz doble click en la demo
